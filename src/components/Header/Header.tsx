@@ -5,7 +5,7 @@ import logo from "./../../image/logo.png";
 export const Header: React.FC = () => {
   return (
     <header className="header-task">
-      <img src={logo} alt="logo" className="logo" />
+      <img src={logo} alt="logo" width="104" height="26" className="logo" />
       <span className="links">
         <a href="#users" className="link">
           Users

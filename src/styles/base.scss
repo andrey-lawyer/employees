@@ -1,3 +1,5 @@
+@import-normalize;
+
 @import "./shared.scss";
 
 @font-face {
@@ -11,8 +13,14 @@ body {
   margin: 0;
   background-color: $background-color;
   color: $font-primary-color;
-  line-height: 1.5;
   font-family: "Nunito", sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
+    monospace;
 }
 
 img {
@@ -30,11 +38,12 @@ h6 {
   margin-top: 0;
 }
 
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
 p {
   margin-top: 0;
 }
-
-// li {
-//   margin: 0;
-//   padding: 0;
-// }

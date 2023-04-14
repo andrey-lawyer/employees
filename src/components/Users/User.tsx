@@ -17,6 +17,8 @@ export const Users: React.FC<IUserProps> = ({
                 className="users_img"
                 src={photo}
                 alt={`${name},${position}`}
+                width="70"
+                height="70"
               />
               <p className="paragraph users_name">{name}</p>
               <p className="paragraph users_other">{position}</p>
