@@ -1,0 +1,39 @@
+%button {
+  border: none;
+  border-radius: 80px;
+  font: inherit;
+  cursor: pointer;
+  outline: none;
+  padding: 4px 0px;
+  text-align: center;
+}
+%radio-custom {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  border-radius: 50%;
+  transform: translate(-50%, -50%);
+  visibility: visible;
+}
+
+%short-text {
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+%visually-hidden {
+  position: absolute;
+
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  border: 0;
+  padding: 0;
+
+  white-space: nowrap;
+  clip-path: inset(100%);
+  clip: rect(0 0 0 0);
+  overflow: hidden;
+}

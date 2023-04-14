@@ -1,0 +1,67 @@
+@import "/src/styles/shared";
+
+.hero {
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  background-color: $font-primary-color;
+  color: $font-secondary-color;
+
+  text-align: center;
+
+  background-image: url(../../image/hero/hero-mob-1x.jpg);
+  @include for-retina {
+    background-image: url(../../image/hero/hero-mob-2x.jpg);
+  }
+  // iPads-portrait screen
+  @include for-iPads-portrait {
+    background-image: url(../../image/hero/hero-iPads-portrait-1x.jpg);
+    @include for-retina {
+      background-image: url(../../image/hero/hero-iPads-portrait-2x.jpg);
+    }
+  }
+  // iPads-landscape screen
+  @include for-iPads-landscape {
+    background-image: url(../../image/hero/hero-iPads-landscape-1x.jpg);
+    @include for-retina {
+      background-image: url(../../image/hero/hero-iPads-landscape-2x.jpg);
+    }
+  }
+  // desktop screen
+  @include for-desktop {
+    background-image: url(../../image/hero/hero-desktop-1x.jpg);
+    @include for-retina {
+      background-image: url(../../image/hero/hero-desktop-2x.jpg);
+    }
+  }
+
+  margin: 0 auto;
+}
+
+.hero_section {
+  padding-top: 40px;
+  padding-bottom: 75px;
+  @include for-iPads-portrait {
+    padding-top: 89px;
+    padding-bottom: 92px;
+    padding-left: 162px;
+    padding-right: 162px;
+  }
+  @include for-iPads-landscape {
+    padding-top: 164px;
+    padding-bottom: 163px;
+    padding-left: 262px;
+    padding-right: 262px;
+  }
+  @include for-desktop {
+    padding-bottom: 167px;
+    padding-left: 395px;
+    padding-right: 395px;
+  }
+}
+.hero_section__title {
+  margin-bottom: 21px;
+}
+.hero_section__paragraph {
+  margin-bottom: 32px;
+}

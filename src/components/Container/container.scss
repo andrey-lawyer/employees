@@ -1,0 +1,25 @@
+@import "/src/styles/shared";
+
+.container {
+  max-width: 599px;
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: 16px;
+  padding-right: 16px;
+  @include for-iPads-portrait {
+    max-width: 768px;
+    padding-left: 32px;
+    padding-right: 32px;
+  }
+  @include for-iPads-landscape {
+    max-width: 1024px;
+
+    padding-left: 60px;
+    padding-right: 60px;
+  }
+  @include for-desktop {
+    max-width: 1200px;
+    padding-left: 15px;
+    padding-right: 15px;
+  }
+}

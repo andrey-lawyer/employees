@@ -1,0 +1,183 @@
+@import "/src/styles/shared";
+
+.section-form {
+  padding-bottom: 100px;
+}
+.block-form {
+  max-width: 380px;
+  margin: 0 auto;
+}
+.title-form {
+  text-align: center;
+  margin: 0;
+}
+
+// styles label/input
+.field-user {
+  position: relative;
+  margin-top: 50px;
+  min-width: 100%;
+  padding: 0px 16px;
+  height: 54px;
+  outline: none;
+
+  background-color: inherit;
+  border-radius: 4px;
+}
+.success {
+  border: 1px solid $color-border-input;
+}
+.error {
+  border: 2px solid $color-error;
+}
+
+.block-form_label {
+  position: relative;
+}
+
+.label-file {
+  display: flex;
+  min-width: 100%;
+  margin-top: 47px;
+  border: none;
+  background-color: inherit;
+  height: 54px;
+}
+.label-file_upload {
+  border-top-left-radius: 4px;
+  border-bottom-left-radius: 4px;
+  display: block;
+  width: 83px;
+
+  padding: 13px 15px;
+}
+.label-file_clue {
+  border-top-right-radius: 4px;
+  border-bottom-right-radius: 4px;
+  display: block;
+  padding: 13px 16px;
+  width: 100%;
+}
+
+.input-file {
+  @extend %visually-hidden;
+}
+
+// styles hints
+.message {
+  position: absolute;
+  bottom: -33px;
+  left: 16px;
+  font-size: 12px;
+  line-height: 1.17;
+}
+
+.message_photo {
+  position: absolute;
+  bottom: -16px;
+  left: 16px;
+  font-size: 12px;
+  line-height: 1.17;
+}
+
+.message_success {
+  color: $placeholder-color;
+}
+.message_error {
+  color: $color-error;
+}
+.success-one {
+  border: 1px solid $font-primary-color;
+}
+.error-one {
+  border: 2px solid $color-error;
+}
+
+.success-two {
+  border-right: 1px solid $color-border-input;
+  border-top: 1px solid $color-border-input;
+  border-bottom: 1px solid $color-border-input;
+}
+.error-two {
+  border-right: 2px solid $color-error;
+  border-top: 2px solid $color-error;
+  border-bottom: 2px solid $color-error;
+}
+
+// styles button
+
+.button-sign-up {
+  @extend %button;
+  min-width: 100px;
+  display: block;
+  margin: 0 auto;
+  margin-top: 50px;
+}
+
+.enable {
+  color: $font-primary-color;
+  background-color: $primary-color;
+  &:hover {
+    background-color: $color-hover;
+    transition: background-color $timing-function;
+  }
+}
+
+.disable {
+  background-color: $disabled-background-color;
+  color: $disabled-color;
+}
+
+// styles ListPosition
+
+.paragraph-position {
+  margin-top: 43px;
+  margin-bottom: 11px;
+}
+
+.radio-label {
+  display: flex;
+  align-items: center;
+  &:not(:last-of-type) {
+    margin-bottom: 13px;
+  }
+}
+.radio-input {
+  position: relative;
+  width: 20px;
+  height: 20px;
+  margin-right: 12px;
+
+  &::before {
+    @extend %radio-custom;
+    width: 20px;
+    height: 20px;
+    background-color: $background-color;
+    border: 1px solid $color-border-input;
+  }
+  &:checked::after {
+    @extend %radio-custom;
+    width: 10px;
+    height: 10px;
+    background-color: $secondary-color;
+  }
+  &:checked::before {
+    @extend %radio-custom;
+    width: 20px;
+    height: 20px;
+    background-color: $background-color;
+    border: 1px solid $secondary-color;
+  }
+}
+// styles success registration of user
+.success-field {
+  text-align: center;
+  margin-top: 20px;
+}
+
+.success-field_image {
+  margin: 0 auto;
+  background-image: url("../../image/success-image.png");
+  width: 328px;
+  height: 290px;
+}

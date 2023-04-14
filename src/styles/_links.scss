@@ -1,0 +1,19 @@
+.link {
+  @extend .paragraph;
+  text-decoration: none;
+  background-color: $primary-color;
+  color: $font-primary-color;
+  display: inline-block;
+  // margin: 0;
+  padding: 4px 0px;
+  min-width: 100px;
+  border-radius: 80px;
+  text-align: center;
+
+  &:hover {
+    background-color: $color-hover;
+    transition-property: background-color;
+    transition-duration: 250ms;
+    transition: background-color $timing-function;
+  }
+}

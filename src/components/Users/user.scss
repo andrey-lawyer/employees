@@ -1,0 +1,74 @@
+@import "/src/styles/shared";
+
+.users {
+  text-align: center;
+}
+
+.users_title {
+  text-align: center;
+  margin-bottom: 50px;
+}
+
+.users_list {
+  text-align: center;
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+  @include for-iPads-portrait {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 16px;
+  }
+  @include for-iPads-landscape {
+    gap: 29px;
+  }
+}
+
+.users_item {
+  background-color: $white;
+  border-radius: 10px;
+  padding: 20px;
+  &:not(:last-of-type) {
+    margin-bottom: 20px;
+  }
+  @include for-iPads-portrait {
+    &:not(:last-of-type) {
+      margin-bottom: 0;
+    }
+    width: 344px;
+  }
+  @include for-iPads-landscape {
+    width: 282px;
+  }
+  @include for-desktop {
+    width: 370px;
+  }
+}
+
+.users_img {
+  margin: 0 auto;
+  border-radius: 50%;
+}
+
+.users_name {
+  @extend %short-text;
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+
+.users_other {
+  @extend %short-text;
+  margin-bottom: 0;
+}
+
+.button-show-more {
+  @extend %button;
+  min-width: 120px;
+  margin-top: 54px;
+  color: $font-primary-color;
+  background-color: $primary-color;
+  &:hover {
+    background-color: $color-hover;
+    transition: background-color $timing-function;
+  }
+}

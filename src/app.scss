@@ -1,0 +1,24 @@
+.loading {
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  background-image: url("./image/Preloader.png");
+  width: 48px;
+  height: 48px;
+  z-index: 999999;
+
+  animation: 1s linear 0s normal none infinite running loading;
+  -webkit-animation: 1s linear 0s normal none infinite running loading;
+}
+
+@keyframes loading {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
