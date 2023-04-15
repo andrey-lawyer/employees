@@ -25,10 +25,11 @@ export function useShowUsers() {
           (a: IUser, b: IUser) =>
             b.registration_timestamp - a.registration_timestamp
         );
-        if (page !== 1)
+        if (page !== 1) {
+          !next_url && setShowButton(false);
           return setEmployees((prevState) => [...prevState, ...users]);
-        setEmployees(users);
-        !next_url && setShowButton(false);
+        }
+        setEmployees(() => [...users]);
       } catch (error) {
         if (error instanceof Error) alert(error.message);
       } finally {

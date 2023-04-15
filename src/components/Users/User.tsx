@@ -1,6 +1,6 @@
 import "./user.scss";
+import { nanoid } from "nanoid";
 import { IUserProps } from "../../types/typesProps";
-
 export const Users: React.FC<IUserProps> = ({
   showButton,
   setPage,
@@ -11,8 +11,8 @@ export const Users: React.FC<IUserProps> = ({
       <h2 className="title users_title">Working with GET request</h2>
       <ul className="users_list">
         {employees &&
-          employees.map(({ id, email, name, phone, photo, position }) => (
-            <li className="users_item" key={id}>
+          employees.map(({ email, name, phone, photo, position }) => (
+            <li className="users_item" key={nanoid()}>
               <img
                 className="users_img"
                 src={photo}
