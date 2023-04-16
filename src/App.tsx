@@ -17,21 +17,23 @@ const App: React.FC = () => {
       <Container>
         <Header />
       </Container>
-      <Hero />
-      <Container>
-        <Users
-          showButton={showButton}
-          setPage={setPage}
-          employees={employees}
-          loading={loading}
-        />
-        <FormUser
-          toggleUser={toggleUser}
-          setPage={setPage}
-          setLoading={setLoading}
-        />
-      </Container>
-      {loading && <div className="loading"></div>}
+      <main>
+        <Hero />
+        <Container>
+          <Users
+            showButton={showButton}
+            setPage={setPage}
+            employees={employees}
+            loading={loading}
+          />
+          <FormUser
+            toggleUser={toggleUser}
+            setPage={setPage}
+            setLoading={setLoading}
+          />
+        </Container>
+        {loading && <div className="loading"></div>}
+      </main>
     </>
   );
 };
