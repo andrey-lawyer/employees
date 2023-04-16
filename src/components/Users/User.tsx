@@ -5,7 +5,9 @@ export const Users: React.FC<IUserProps> = ({
   showButton,
   setPage,
   employees,
+  loading,
 }) => {
+  const classButton = "button-show-more";
   return (
     <section id="users" className="section-task users">
       <h2 className="title users_title">Working with GET request</h2>
@@ -29,7 +31,10 @@ export const Users: React.FC<IUserProps> = ({
       </ul>
       {showButton && (
         <button
-          className="button-show-more"
+          disabled={loading}
+          className={
+            loading ? classButton + " disable" : classButton + " enable"
+          }
           type="button"
           onClick={() => setPage((prevPage: number) => prevPage + 1)}
         >

@@ -23,7 +23,7 @@ const App: React.FC = () => {
           showButton={showButton}
           setPage={setPage}
           employees={employees}
-          setLoading={setLoading}
+          loading={loading}
         />
         <FormUser
           toggleUser={toggleUser}

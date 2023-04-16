@@ -1,0 +1,13 @@
+.enable {
+  color: $font-primary-color;
+  background-color: $primary-color;
+  &:hover {
+    background-color: $color-hover;
+    transition: background-color $timing-function;
+  }
+}
+
+.disable {
+  background-color: $disabled-background-color;
+  color: $disabled-color;
+}

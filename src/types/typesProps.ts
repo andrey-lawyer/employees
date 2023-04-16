@@ -14,7 +14,8 @@ export interface IFormProps extends IListPositionsProps, IPage<page> {
   toggleUser: () => void;
 }
 
-export interface IUserProps extends IListPositionsProps, IPage<pageFunction> {
+export interface IUserProps extends IPage<pageFunction> {
   showButton: boolean;
   employees: IUser[];
+  loading: boolean;
 }
