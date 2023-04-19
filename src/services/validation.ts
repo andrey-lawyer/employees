@@ -11,9 +11,9 @@ const FILE_SIZE = 5242880;
 export let schema = yup.object().shape({
   name: yup
     .string()
-    .required("Name is required")
     .min(2, "Name is too short")
-    .max(60, "Name is too long"),
+    .max(60, "Name is too long")
+    .required("Name is required"),
   email: yup
     .string()
     .required("E-mail is required")
@@ -28,13 +28,13 @@ export let schema = yup.object().shape({
   photo: yup
     .mixed()
     .required("Photo is required")
+    .test("fileType", "Unsupported File Format", (value: any) =>
+      SUPPORTED_FORMATS.includes(value.type)
+    )
     .test(
       "fileSize",
       "File Size is too large",
       (value: any) => value.size <= FILE_SIZE
-    )
-    .test("fileType", "Unsupported File Format", (value: any) =>
-      SUPPORTED_FORMATS.includes(value.type)
     )
     .test("minSize", "min size image must be at least 70х70", (value: any) => {
       return checkSizeImage(value);

@@ -5,9 +5,12 @@ export function checkSizeImage(value: Blob): any {
     reader.onload = function (value) {
       const img = new Image();
       const temp = value?.target?.result;
+
       if (typeof temp === "string") {
+        !temp.includes("image") && resolve(true);
         img.src = temp;
       }
+
       img.onload = function () {
         const minWidth = img.width;
         const minHeight = img.height;

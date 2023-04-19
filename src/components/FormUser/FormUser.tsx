@@ -55,6 +55,7 @@ export const FormUser: React.FC<IFormProps> = ({
           const notEmpty = email || name || phone || photo;
           const isError =
             errors.name || errors.email || errors.photo || errors.phone;
+
           const onEnabled = email && name && phone && photo && !isError;
           return (
             <>
